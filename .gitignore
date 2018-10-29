@@ -1,0 +1,15 @@
+Thumbs.db
+.DS_Store
+!.gitkeep
+
+.rbenv-version
+.rvmrc
+
+*.gem
+.bundle
+.sass-cache
+_site
+Gemfile.lock
+
+.idea
+.vscode

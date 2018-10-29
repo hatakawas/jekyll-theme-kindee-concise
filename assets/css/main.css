@@ -1,0 +1,129 @@
+/* html, body {
+    height: 100%;
+} */
+
+body {
+    background: rgb(235, 235, 235);
+    /* background: #f6f6f6; */
+    font-family: "Consolas", "Monaco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+
+
+.wrapper {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.clearfix {
+    overflow: hidden;
+}
+
+.header, .main, #footer {
+    box-sizing: border-box;
+}
+
+/* =================== Document header segment =================== */
+.header {
+    border-top: 5px solid #424242;
+    border-bottom: 1px solid #efefef;
+    height: 56px;
+    background: #fdfdfd;
+}
+
+/* #banner {
+    background: #777;
+    height: 100px;
+} */
+
+nav {
+    line-height: 56px;
+}
+
+nav .logo {
+    float: left;
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: 700px;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    float: right;
+    margin: 0;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 14px;
+}
+
+nav ul li a, nav .logo a {
+    display: inline-block;
+    color: #424242;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+/* =================== Document content segment =================== */
+
+.main {
+    margin: 10px auto;
+    background: #fdfdfd;
+    min-height: calc(100vh - 56px - 56px - 20px);
+}
+
+.content {
+    float: left;
+    width: calc(70% - 5px);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.sidebar {
+    float: right;
+    width: calc(30% - 5px);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.article, .aside {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+
+.article header h2, .article header time {
+    display: inline-block;
+}
+
+.aside ul {
+    margin: 0;
+    /* padding-left: 10px; */
+    padding: 0;
+    list-style: none;
+}
+
+/* =================== Document footer segment =================== */
+
+.footer {
+    border-top: 1px solid #efefef;
+    border-bottom: 5px solid #424242;
+    background: #fdfdfd;
+    height: 56px;
+}
+
+.copyright {
+    line-height: 56px;
+    text-align: center;
+}

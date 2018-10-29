@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<main class="main clearfix">
+    <div class="content">
+        {%- for post in site.posts -%}
+        <article class="article">
+            <header>
+                <h2>{{ post.title | escape }}</h2>
+                <time>{{ post.date | date: site.kindee.date_format }}</time>
+            </header>
+            <article>
+                {{ post.excerpt }}
+            </article>
+            <footer>
+                <span>分类：{{ post.categories }}</span>
+                <span>标签：{{ post.tags }}</span>
+            </footer>
+        </article>
+        {%- endfor -%}
+    </div>
+    <div class="sidebar">
+        <aside class="aside">
+            <h2>Categories</h2>
+            <div>
+                {%- for category in site.categories -%}
+                <span>{{ category | first }}</span><br>
+                {%- endfor -%}
+            </div>
+        </aside>
+        <aside class="aside">
+            <h2>Tags</h2>
+            <div>
+                {%- for tag in site.tags -%}
+                <span>{{ tag | first }}</span><br>
+                {%- endfor -%}
+            </div>
+        </aside>
+        <aside class="aside">
+            <h2>Recent Posts</h2>
+            <ul>
+                {%- for post in site.posts limit: 3 -%}
+                <li>- {{ post.title }}</li>
+                {%- endfor -%}
+            </ul>
+        </aside>
+    </div>
+</main>
