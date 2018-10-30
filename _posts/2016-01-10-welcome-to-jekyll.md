@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2016-01-10T22:22:11.278+0800
+date: 2016-01-10 22:22:11 +0800
 title: "Welcome to Jekyll!"
-category: jekyll
+categories: [jekyll]
 tags: [jekyll]
 description: 
 ---

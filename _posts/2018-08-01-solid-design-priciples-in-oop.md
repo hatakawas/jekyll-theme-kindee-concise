@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2018-07-31T19:56:02.676+0800
+date: 2018-07-31 19:56:02 +0800
 title: "面向对象编程中的SOLID设计原则"
-category: Strength
+categories: [Strength]
 tags: [oop, design principles, solid]
 description: "面向对象程序设计中的 S.O.L.I.D 原则"
 ---
