@@ -15,6 +15,9 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
 }
 
+a {
+    text-decoration: none;
+}
 
 .wrapper {
     max-width: 1140px;
@@ -25,25 +28,23 @@ h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
 }
 
-.header, .main, #footer {
+.header, .main, .footer {
     box-sizing: border-box;
+}
+
+.header, .footer {
+    background: rgb(230, 223, 223, 0.7);
+    height: 56px;
 }
 
 /* =================== Document header segment =================== */
 .header {
     border-top: 5px solid #424242;
     border-bottom: 1px solid #efefef;
-    height: 56px;
-    background: #fdfdfd;
 }
 
-/* #banner {
-    background: #777;
-    height: 100px;
-} */
-
 nav {
-    line-height: 56px;
+    line-height: calc(56px - 5px - 1px);
 }
 
 nav .logo {
@@ -68,43 +69,47 @@ nav ul li {
 
 nav ul li a, nav .logo a {
     display: inline-block;
-    color: #424242;
-}
-
-nav a {
-    text-decoration: none;
+    /* color: #424242; */
 }
 
 /* =================== Document content segment =================== */
 
 .main {
-    margin: 10px auto;
-    background: #fdfdfd;
+    margin: 0 auto;
     min-height: calc(100vh - 56px - 56px - 20px);
+    background: rgba(218, 209, 209, 0.7);
 }
 
+.content, .sidebar {
+    padding: 20px 0;
+    min-height: inherit;
+    box-sizing: border-box;
+}
 .content {
     float: left;
-    width: calc(70% - 5px);
-    padding: 10px;
-    box-sizing: border-box;
+    width: 70%;
+    padding: 20px 10px 20px 20px;
 }
 
 .sidebar {
     float: right;
-    width: calc(30% - 5px);
-    padding: 10px;
-    box-sizing: border-box;
+    width: 30%;
+    padding: 20px 20px 20px 10px;
 }
 
 .article, .aside {
+    margin-bottom: 10px;
     padding: 15px 20px;
-    border-bottom: 1px solid #eaeaea;
+    background: #fdfdfd;
+    /* border-bottom: 1px solid #eaeaea; */
 }
-
 
 .article header h2, .article header time {
     display: inline-block;
+}
+
+.article i {
+    color:rgb(182, 211, 236);
 }
 
 .aside ul {
@@ -119,11 +124,9 @@ nav a {
 .footer {
     border-top: 1px solid #efefef;
     border-bottom: 5px solid #424242;
-    background: #fdfdfd;
-    height: 56px;
 }
 
 .copyright {
-    line-height: 56px;
+    line-height: calc(56px - 5px - 1px);
     text-align: center;
 }
