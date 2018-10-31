@@ -2,48 +2,14 @@
 layout: default
 ---
 
-<main class="main clearfix">
-            <div class="content">
-                <article class="article">
-                    <header>
-                        <h2>JVM 内存模型简介</h2>
-                        <time>2016.04.21</time>
-                    </header>
-                    <article>
-                        <div>
-                            <p>Java 程序在运行过程中，JVM 会将其管理的内存划分为几个不同的数据区域。这些数据区域各有用途，并且具备不同的创建和销毁时间。</p>
-                        </div>
-                    </article>
-                    <footer>
-                        <span>分类：经验</span>
-                        <span>标签：Java 异常</span>
-                    </footer>
-                </article>
-            </div>
-            <div class="sidebar">
-                <aside class="aside">
-                    <h2>分类</h2>
-                    <div>
-                       <span>Java</span>
-                       <span>Scala</span>
-                       <span>Python</span>
-                    </div>
-                </aside>
-                <aside class="aside">
-                    <h2>标签</h2>
-                    <div>
-                        <span>Java</span>
-                        <span>异常</span>
-                        <span>大数据</span>
-                    </div>
-                </aside>
-                <aside class="aside">
-                    <h2>Recent Posts</h2>
-                    <ul>
-                        <li>- SpringBoot异常处理最佳实践</li>
-                        <li>- JVM 内存模型简介</li>
-                        <li>- 面向对象编程中的SOLID设计原则</li>
-                    </ul>
-                </aside>
-            </div>
-        </main>
+<article class="page">
+
+    <header class="page-header">
+        <h1 class="page-title">{{ page.title }}</h1>
+    </header>
+
+    <div class="page-content">
+        {{ content }}
+    </div>
+
+</article>

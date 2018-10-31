@@ -1,10 +1,5 @@
-/* html, body {
-    height: 100%;
-} */
-
 body {
     background: rgb(235, 235, 235);
-    /* background: #f6f6f6; */
     font-family: "Consolas", "Monaco", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 12px;
     line-height: 1.5;
@@ -19,6 +14,14 @@ a {
     text-decoration: none;
 }
 
+img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding: 10px 30px;
+    box-sizing: border-box;
+}
+
 .wrapper {
     max-width: 1140px;
     margin: 0 auto;
@@ -28,10 +31,6 @@ a {
     overflow: hidden;
 }
 
-.header, .main, .footer {
-    box-sizing: border-box;
-}
-
 .header, .footer {
     background: rgb(230, 223, 223, 0.7);
     height: 56px;
@@ -39,6 +38,7 @@ a {
 
 /* =================== Document header segment =================== */
 .header {
+    box-sizing: border-box;
     border-top: 5px solid #424242;
     border-bottom: 1px solid #efefef;
 }
@@ -76,13 +76,13 @@ nav ul li a, nav .logo a {
 
 .main {
     margin: 0 auto;
+    box-sizing: border-box;
     min-height: calc(100vh - 56px - 56px - 20px);
     background: rgba(218, 209, 209, 0.7);
 }
 
 .content, .sidebar {
     padding: 20px 0;
-    min-height: inherit;
     box-sizing: border-box;
 }
 .content {
@@ -101,7 +101,6 @@ nav ul li a, nav .logo a {
     margin-bottom: 10px;
     padding: 15px 20px;
     background: #fdfdfd;
-    /* border-bottom: 1px solid #eaeaea; */
 }
 
 .article header h2, .article header time {
@@ -114,7 +113,6 @@ nav ul li a, nav .logo a {
 
 .aside ul {
     margin: 0;
-    /* padding-left: 10px; */
     padding: 0;
     list-style: none;
 }
@@ -122,6 +120,7 @@ nav ul li a, nav .logo a {
 /* =================== Document footer segment =================== */
 
 .footer {
+    box-sizing: border-box;
     border-top: 1px solid #efefef;
     border-bottom: 5px solid #424242;
 }
@@ -129,4 +128,34 @@ nav ul li a, nav .logo a {
 .copyright {
     line-height: calc(56px - 5px - 1px);
     text-align: center;
+}
+
+
+
+
+/* =================== Blog Post =================== */
+.blogpost {
+    margin-bottom: 10px;
+    padding: 15px 20px 75px;
+    background: #fdfdfd;
+}
+
+.blogpost-title, .blogpost-meta {
+    display: inline-block;
+}
+
+.page {
+    padding: 20px 10px 20px 20px;
+}
+
+.page-header {
+    margin: 30px 0;
+}
+
+.page-title {
+    font-size: 32px;
+}
+
+.page-content {
+    margin-bottom: 30px;
 }

@@ -3,47 +3,45 @@
 
 <head>
     <meta charset="UTF-8">
+    <base href="{{ site.baseurl | prepend: site.url }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ page.title }} | KINDEE-SIMPLE</title>
-    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-
     <!-- Set render engine for 360 browser -->
     <meta name="renderer" content="webkit">
-
     <!-- No Baidu Siteapp-->
     <meta http-equiv="Cache-Control" content="no-siteapp" />
-
-    <!-- 标题栏icon -->
-    <link rel="icon" type="image/png" href="{{ '/favicon.ico' }}">
-    <!-- 收藏夹icon -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{ '/favicon.ico' }}">
-    <link rel="bookmark" type="image/x-icon" href="{{ '/favicon.ico' }}">
-
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">
-
+    {%- seo -%}
+    <!-- Page title icon -->
+    <link rel="icon" type="image/png" href="{{ '/favicon.ico' | relative_url }}">
+    <!-- Favorites icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
+    <link rel="bookmark" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | relative_url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+    <!-- Styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{ '/assets/css/normalize.css' | prepend: site.baseurl }}">
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ '/assets/css/normalize.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 
 <body>
     <div class="wrapper">
         <header class="header">
             <nav>
-                <div class="logo"><a href="#">逻魔代码</a></div>
+                <div class="logo"><a rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a></div>
                 <ul>
                     <li><a href="#">首页</a></li>
                     <li><a href="#">分类</a></li>
                     <li><a href="#">归档</a></li>
-                    <li><a href="#">关于</a></li>
+                    <li><a href="{{ '/about' | relative_url }}">关于</a></li>
                 </ul>
             </nav>
-            <!-- <div id="banner"></div> -->
         </header>
-        {{ content }}
+        <main class="main clearfix">
+            {{ content }}
+        </main>
+        
         <footer class="footer clearfix">
             <div class="copyright">
                 COPYRIGHT &copy; 2018 逻魔代码 ALL RIGHTS RESERVED.

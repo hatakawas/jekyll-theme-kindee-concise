@@ -1,49 +1,19 @@
 ---
-layout: default
+layout: framework
 ---
 
-<main class="main">
-    <div class="content">
-        {%- for post in site.posts -%}
-        <article class="article">
-            <header>
-                <h2><a href="{{ post.url }}">{{ post.title | escape }}</a></h2>
-                <time>{{ post.date | date: site.kindee.date_format }}</time>
-            </header>
-            <article>
-                {{ post.excerpt }}
-            </article>
-            <footer>
-                <span><i class="fa fa-folder" aria-hidden="true"></i>：{{ post.categories }}</span>
-                <span><i class="fa fa-tags" aria-hidden="true"></i>：{{ post.tags }}</span>
-            </footer>
-        </article>
-        {%- endfor -%}
-    </div>
-    <div class="sidebar">
-        <aside class="aside">
-            <h2>Categories</h2>
-            <div>
-                {%- for category in site.categories -%}
-                <span>{{ category | first }}</span><br>
-                {%- endfor -%}
-            </div>
-        </aside>
-        <aside class="aside">
-            <h2>Tags</h2>
-            <div>
-                {%- for tag in site.tags -%}
-                <span>{{ tag | first }}</span><br>
-                {%- endfor -%}
-            </div>
-        </aside>
-        <aside class="aside">
-            <h2>Recent Posts</h2>
-            <ul>
-                {%- for post in site.posts limit: 3 -%}
-                <li>- {{ post.title }}</li>
-                {%- endfor -%}
-            </ul>
-        </aside>
-    </div>
-</main>
+{%- for post in site.posts -%}
+<article class="article">
+    <header>
+        <h2><a href="{{ post.url }}">{{ post.title | escape }}</a></h2>
+        <time>{{ post.date | date: site.kindee.date_format }}</time>
+    </header>
+    <article>
+        {{ post.excerpt }}
+    </article>
+    <footer>
+        <span><i class="fa fa-folder" aria-hidden="true"></i>：{{ post.categories }}</span>
+        <span><i class="fa fa-tags" aria-hidden="true"></i>：{{ post.tags }}</span>
+    </footer>
+</article>
+{%- endfor -%}
