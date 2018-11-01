@@ -1,12 +1,20 @@
+
+@import "variable";
+
 body {
-    background: rgb(235, 235, 235);
+    background: $themed-body-background;
     font-family: "Consolas", "Monaco", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 12px;
     line-height: 1.5;
     box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 400;
 }
 
@@ -31,60 +39,59 @@ img {
     overflow: hidden;
 }
 
-.header, .footer {
-    background: rgb(230, 223, 223, 0.7);
-    height: 56px;
-}
-
-/* =================== Document header segment =================== */
+// Document header segment
+// ---------------------------------------------------------------------------
 .header {
-    box-sizing: border-box;
+    height: $themed-header-height;
+    background: $themed-header-background;
     border-top: 5px solid #424242;
     border-bottom: 1px solid #efefef;
+    box-sizing: border-box;
 }
 
 nav {
     line-height: calc(56px - 5px - 1px);
+
+    .logo {
+        float: left;
+        margin-left: 20px;
+        font-size: 20px;
+        font-weight: 700px;
+        letter-spacing: 1px;
+    }
+
+    ul {
+        float: right;
+        margin: 0;
+        list-style: none;
+
+        li {
+            display: inline-block;
+            margin-right: 20px;
+            font-size: 14px;
+        }
+    }
+
+    a {
+        display: inline-block;
+    }
 }
 
-nav .logo {
-    float: left;
-    margin-left: 20px;
-    font-size: 20px;
-    font-weight: 700px;
-    letter-spacing: 1px;
-}
-
-nav ul {
-    float: right;
-    margin: 0;
-    list-style: none;
-}
-
-nav ul li {
-    display: inline-block;
-    margin-right: 20px;
-    font-size: 14px;
-}
-
-nav ul li a, nav .logo a {
-    display: inline-block;
-}
-
-/* =================== Document content segment =================== */
-
+// Document main segment
+// ---------------------------------------------------------------------------
 .main {
     margin: 0 auto;
     box-sizing: border-box;
-    min-height: calc(100vh - 56px - 56px - 20px);
-    background: rgba(218, 209, 209, 0.7);
+    min-height: calc(100vh - #{$themed-header-height} - #{$themed-footer-height});
+    background: $themed-main-background;
 }
 
-.content, .sidebar {
-    padding: 20px 0;
+.content,
+.sidebar {
     box-sizing: border-box;
-    padding: 20px;
+    padding: 15px;
 }
+
 .content {
     float: left;
     width: 70%;
@@ -97,18 +104,20 @@ nav ul li a, nav .logo a {
     padding-left: 10px;
 }
 
-.article, .aside {
+.article,
+.aside {
     margin-bottom: 10px;
     padding: 15px 20px;
     background: #fdfdfd;
 }
 
-.article header h2, .article header time {
+.article header h2,
+.article header time {
     display: inline-block;
 }
 
 .article i {
-    color:rgb(182, 211, 236);
+    color: rgb(182, 211, 236);
 }
 
 .aside ul {
@@ -117,12 +126,15 @@ nav ul li a, nav .logo a {
     list-style: none;
 }
 
-/* =================== Document footer segment =================== */
+// Document footer segment
+// ---------------------------------------------------------------------------
 
 .footer {
-    box-sizing: border-box;
+    height: $themed-footer-height;
+    background: $themed-header-background;
     border-top: 1px solid #efefef;
     border-bottom: 5px solid #424242;
+    box-sizing: border-box;
 }
 
 .copyright {
@@ -131,9 +143,8 @@ nav ul li a, nav .logo a {
 }
 
 
-
-
-/* =================== Blog Post =================== */
+// Blog Post 
+// ---------------------------------------------------------------------------
 .blogpost {
     margin-bottom: 10px;
     padding: 15px 20px 75px;
@@ -159,3 +170,4 @@ nav ul li a, nav .logo a {
 .page-content {
     margin-bottom: 30px;
 }
+
