@@ -39,9 +39,9 @@ img {
     overflow: hidden;
 }
 
-// Document header segment
+// Layout: header
 // ---------------------------------------------------------------------------
-.header {
+#header {
     height: $themed-header-height;
     background: $themed-header-background;
     border-top: 5px solid #424242;
@@ -77,9 +77,9 @@ nav {
     }
 }
 
-// Document main segment
+// Layout: main
 // ---------------------------------------------------------------------------
-.main {
+#main {
     margin: 0 auto;
     box-sizing: border-box;
     min-height: calc(100vh - #{$themed-header-height} - #{$themed-footer-height});
@@ -126,10 +126,10 @@ nav {
     list-style: none;
 }
 
-// Document footer segment
+// Layout: footer
 // ---------------------------------------------------------------------------
 
-.footer {
+#footer {
     height: $themed-footer-height;
     background: $themed-header-background;
     border-top: 1px solid #efefef;

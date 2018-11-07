@@ -26,9 +26,9 @@
     <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
 </head>
 
-<body class="theme">
+<body>
     <div class="wrapper">
-        <header class="header">
+        <header id="header">
             <nav>
                 <div class="logo"><a rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a></div>
                 <ul>
@@ -39,11 +39,10 @@
                 </ul>
             </nav>
         </header>
-        <main class="main clearfix">
+        <main id="main" class="clearfix">
             {{ content }}
         </main>
-        
-        <footer class="footer clearfix">
+        <footer id="footer" class="clearfix">
             <div class="copyright">
                 COPYRIGHT &copy; 2018 逻魔代码 ALL RIGHTS RESERVED.
             </div>
