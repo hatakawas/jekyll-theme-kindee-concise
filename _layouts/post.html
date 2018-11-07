@@ -1,17 +1,20 @@
 ---
-layout: framework
+layout: default
 ---
 
-<article class="blogpost" itemscope itemtype="http://schema.org/BlogPosting">
-    <header class="blogpost-header">
-        <h2 class="blogpost-title" itemprop="name headline">{{ page.title }}</h2>
-        <div class="blogpost-meta">
-            <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-                {{ page.date | date: site.kindee.date_format }}
-            </time>
+<div class="site-body-content layout-post">
+    <article class="blogpost" itemscope itemtype="http://schema.org/BlogPosting">
+        <header class="blogpost-header">
+            <h2 class="blogpost-title" itemprop="name headline">{{ page.title }}</h2>
+            <div class="blogpost-meta">
+                <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                    {{ page.date | date: site.kindee.date_format }}
+                </time>
+            </div>
+        </header>
+        <div class="blogpost-content" itemprop="articleBody">
+            {{ content }}
         </div>
-    </header>
-    <div class="blogpost-content" itemprop="articleBody">
-        {{ content }}
-    </div>
-</article>
+    </article>
+</div>
+{%- include aside.html -%}

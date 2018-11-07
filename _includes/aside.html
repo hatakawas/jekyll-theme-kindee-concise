@@ -1,35 +1,26 @@
----
-layout: default
----
-
-<!-- The content in main -->
-<div class="content">
-    {{ content }}
-</div>
-<!-- The sidebar in main -->
-<div class="sidebar">
-    <aside class="aside">
+<aside class="site-body-aside">
+    <section class="aside-module">
         <h2>Categories</h2>
         <div>
             {%- for category in site.categories -%}
             <span>{{ category | first }}</span><br>
             {%- endfor -%}
         </div>
-    </aside>
-    <aside class="aside">
+    </section>
+    <section class="aside-module">
         <h2>Tags</h2>
         <div>
             {%- for tag in site.tags -%}
             <span>{{ tag | first }}</span><br>
             {%- endfor -%}
         </div>
-    </aside>
-    <aside class="aside">
+    </section>
+    <section class="aside-module">
         <h2>Recent Posts</h2>
         <ul>
             {%- for post in site.posts limit: 3 -%}
             <li>- {{ post.title }}</li>
             {%- endfor -%}
         </ul>
-    </aside>
-</div>
+    </section>
+</aside>

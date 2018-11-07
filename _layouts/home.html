@@ -1,19 +1,22 @@
 ---
-layout: framework
+layout: default
 ---
 
-{%- for post in site.posts -%}
-<article class="article">
-    <header>
-        <h2><a href="{{ post.url }}">{{ post.title | escape }}</a></h2>
-        <time>{{ post.date | date: site.kindee.date_format }}</time>
-    </header>
-    <article>
-        {{ post.excerpt }}
+<div class="site-body-content layout-home">
+    {%- for post in site.posts -%}
+    <article class="article-module">
+        <header>
+            <h2><a href="{{ post.url }}">{{ post.title | escape }}</a></h2>
+            <time>{{ post.date | date: site.kindee.date_format }}</time>
+        </header>
+        <article>
+            {{ post.excerpt }}
+        </article>
+        <footer>
+            <span><i class="fa fa-folder" aria-hidden="true"></i>：{{ post.categories }}</span>
+            <span><i class="fa fa-tags" aria-hidden="true"></i>：{{ post.tags }}</span>
+        </footer>
     </article>
-    <footer>
-        <span><i class="fa fa-folder" aria-hidden="true"></i>：{{ post.categories }}</span>
-        <span><i class="fa fa-tags" aria-hidden="true"></i>：{{ post.tags }}</span>
-    </footer>
-</article>
-{%- endfor -%}
+    {%- endfor -%}
+</div>
+{%- include aside.html -%}

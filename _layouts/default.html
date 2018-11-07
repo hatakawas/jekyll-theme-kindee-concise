@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 
 <head>
     <meta charset="UTF-8">
@@ -28,7 +28,7 @@
 
 <body>
     <div class="wrapper">
-        <header id="header">
+        <header class="site-header">
             <nav>
                 <div class="logo"><a rel="author" href="{{ '/' | relative_url }}">{{ site.title | escape }}</a></div>
                 <ul>
@@ -39,10 +39,10 @@
                 </ul>
             </nav>
         </header>
-        <main id="main" class="clearfix">
+        <main class="site-body clearfix">
             {{ content }}
         </main>
-        <footer id="footer" class="clearfix">
+        <footer class="site-footer clearfix">
             <div class="copyright">
                 COPYRIGHT &copy; 2018 逻魔代码 ALL RIGHTS RESERVED.
             </div>
