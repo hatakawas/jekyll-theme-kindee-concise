@@ -2,8 +2,8 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-kindee-simple"
-  spec.version       = "0.1.5"
-  spec.authors       = ["Trent"]
+  spec.version       = "0.1.6"
+  spec.authors       = ["hatakawas"]
   spec.email         = ["hatakawas@163.com"]
 
   spec.summary       = "Jekyll-theme-kindee-simple is a simple but not simple theme for jekyll."
