@@ -1,50 +1,15 @@
-@import "variable";
-
-body {
-    background: $themed-body-background;
-    font-family: "Consolas", "Monaco", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 12px;
-    line-height: 1.5;
-    box-sizing: border-box;
-    // overflow-y: scroll;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 400;
-}
-
-a {
-    text-decoration: none;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-    margin: 0 auto;
-    padding: 10px 30px;
-    box-sizing: border-box;
-}
-
 .wrapper {
     max-width: 1140px;
     margin: 0 auto;
     padding-left: calc(100vw - 100%);
 }
 
-.clearfix {
-    overflow: hidden;
-}
-
+// ==========================================================================
 // Site header
-// ---------------------------------------------------------------------------
+// ==========================================================================
 .site-header {
-    height: $themed-header-height;
-    background: $themed-header-background;
+    height: $themed-site-header-height;
+    background: $themed-site-header-background;
     border-top: 5px solid #424242;
     border-bottom: 1px solid #efefef;
     box-sizing: border-box;
@@ -78,13 +43,14 @@ img {
     }
 }
 
+// ==========================================================================
 // Site body
-// ---------------------------------------------------------------------------
+// ==========================================================================
 .site-body {
     margin: 0 auto;
     box-sizing: border-box;
-    min-height: calc(100vh - #{$themed-header-height} - #{$themed-footer-height});
-    background: $themed-main-background;
+    min-height: calc(100vh - #{$themed-site-header-height} - #{$themed-site-footer-height});
+    background: $themed-site-body-background;
 }
 
 .site-body-content,
@@ -112,34 +78,12 @@ img {
     width: 100%;
 }
 
-
-
-@mixin module {
-    box-sizing: border-box;
-    margin-bottom: 10px;
-    padding: 15px 20px;
-    background: #fdfdfd;
-
-    &:last-child {
-        margin-bottom: 0;
-    }
-}
-
-@mixin page {
-    box-sizing: border-box;
-    padding: 15px 20px;
-    background: #fdfdfd;
-    // 30px is the padding-top and padding-bottom of .site-body-content
-    min-height: calc(100vh - #{$themed-header-height} - #{$themed-footer-height} - 30px);
-}
-
-
+// ==========================================================================
 // Site footer
-// ---------------------------------------------------------------------------
-
+// ==========================================================================
 .site-footer {
-    height: $themed-footer-height;
-    background: $themed-header-background;
+    height: $themed-site-footer-height;
+    background: $themed-site-header-background;
     border-top: 1px solid #efefef;
     border-bottom: 5px solid #424242;
     box-sizing: border-box;
@@ -150,12 +94,10 @@ img {
     }
 }
 
-
-
-
+// ==========================================================================
 // Blog Post 
-// ---------------------------------------------------------------------------
-.layout-home>.article-module {
+// ==========================================================================
+.layout-home > .article-module {
     @include module();
 
     header {
@@ -171,7 +113,7 @@ img {
     }
 }
 
-.site-body-aside>.aside-module {
+.site-body-aside > .aside-module {
     @include module();
 
     ul {
@@ -181,7 +123,7 @@ img {
     }
 }
 
-.layout-post>.blogpost {
+.layout-post > .blogpost {
     @include page();
 
     .blogpost-title,
@@ -190,7 +132,7 @@ img {
     }
 }
 
-.layout-page>.singlepage {
+.layout-page > .singlepage {
     @include page();
 
     .singlepage-header {
