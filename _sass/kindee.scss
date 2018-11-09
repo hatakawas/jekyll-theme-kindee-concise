@@ -1,7 +1,26 @@
 @charset "utf-8";
 
-@import "kindee/variable";
+@import "kindee/variables";
+@import "kindee/mixins";
+@import "kindee/functions";
+
+
+/* ==========================================================================
+   Core styles
+   ========================================================================== */
+// Reset style of normalize.css
+@import "kindee/normalize";
+@import "kindee/base";
 @import "kindee/layout";
+
+
+/* ==========================================================================
+   Syntax highlight
+   ========================================================================== */
 @import "kindee/highlight";
 
 
+/* ==========================================================================
+   Utility classes
+   ========================================================================== */
+@import "kindee/utilities";
