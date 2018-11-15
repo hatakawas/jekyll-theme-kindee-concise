@@ -101,7 +101,6 @@
     @include module();
 
     header {
-
         h2,
         time {
             display: inline-block;
@@ -110,6 +109,33 @@
 
     i {
         color: rgb(182, 211, 236);
+        font-size: 14px;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            display: inline-block;
+            margin-right: 10px;
+            &:last-child {
+                margin-right: 0px;
+            }
+            span {
+                background: rgba(197, 209, 207, 0.5);
+                padding: 2px 2px;
+                margin: 0 2px;
+                font-size: 12px;
+
+                &:first-child {
+                    margin-left: 10px;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
     }
 }
 
