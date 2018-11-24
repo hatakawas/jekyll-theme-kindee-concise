@@ -1,0 +1,21 @@
+---
+layout: page
+title: Categories
+---
+
+{% for category in site.categories %}
+    {%- assign slugged_category = category[0] | downcase | url_escape | strip | replace: ' ', '-' -%}
+  <h3 id="{{slugged_category}}"><a href="{{ page.path | relative_url }}#{{slugged_category}}">{{ category[0] | camelcase }}</a></h3>
+  <ul>
+    {% assign posts = category[1] %}
+    {% for post in posts %}
+      {% if post.title != null %}
+      {% if group == null or group == post.group %}
+      <li><a href="{{ post.url }}"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: site.data.kindee.date_format }}</time> ~> {{ post.title }}</a></li>
+      {% endif %}
+      {% endif %}
+    {% endfor %}
+    {% assign posts = nil %}
+    {% assign group = nil %}
+  </ul>
+{% endfor %}
