@@ -17,5 +17,5 @@
     padding: 15px 20px;
     background: #fdfdfd;
     // 30px is the padding-top and padding-bottom of .site-body-content
-    min-height: calc(100vh - #{$themed-site-header-height} - #{$themed-site-footer-height} - 30px);
+    min-height: calc(100vh - #{$site-header-height} - #{$site-footer-height} - 30px);
 }
