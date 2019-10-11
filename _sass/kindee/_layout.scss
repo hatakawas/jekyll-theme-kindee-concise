@@ -8,8 +8,8 @@
 // Site header
 // ==========================================================================
 .site-header {
-    height: $themed-site-header-height;
-    background: $themed-site-header-background;
+    height: $site-header-height;
+    background: $site-header-background;
     border-top: 5px solid #424242;
     border-bottom: 1px solid #efefef;
     box-sizing: border-box;
@@ -49,8 +49,8 @@
 .site-body {
     margin: 0 auto;
     box-sizing: border-box;
-    min-height: calc(100vh - #{$themed-site-header-height} - #{$themed-site-footer-height});
-    background: $themed-site-body-background;
+    min-height: calc(100vh - #{$site-header-height} - #{$site-footer-height});
+    background: $site-body-background;
 }
 
 .site-body-content,
@@ -82,8 +82,8 @@
 // Site footer
 // ==========================================================================
 .site-footer {
-    height: $themed-site-footer-height;
-    background: $themed-site-header-background;
+    height: $site-footer-height;
+    background: $site-header-background;
     border-top: 1px solid #efefef;
     border-bottom: 5px solid #424242;
     box-sizing: border-box;
@@ -95,7 +95,7 @@
 }
 
 // ==========================================================================
-// Blog Post 
+// Blog Post
 // ==========================================================================
 .layout-home > .article-module {
     @include module();
