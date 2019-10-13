@@ -32,3 +32,9 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
+
+theme_namespace: kindee
+jekyll-theme-kindee-simple:
+  name: BLOG-NAME
+  title: BLOG-TITLE
+
