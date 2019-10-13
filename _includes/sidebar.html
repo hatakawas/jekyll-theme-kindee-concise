@@ -1,10 +1,13 @@
-<div id="site-sidebar-content" class="site-sidebar-content">
+<div class="site-sidebar-content">
+  <!-- Widget: categories -->
   {%- if theme.widgets.categories.enabled -%}
     {%- include widgets/categories.html -%}
   {%- endif -%}
+  <!-- Widget: tags -->
   {%- if theme.widgets.tags.enabled -%}
     {%- include widgets/tags.html -%}
   {%- endif -%}
+  <!-- Widget: recent_posts -->
   {%- if theme.widgets.recent_posts.enabled -%}
     {%- include widgets/recent_posts.html -%}
   {%- endif -%}
