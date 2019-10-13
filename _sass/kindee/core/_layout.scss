@@ -1,12 +1,10 @@
 .site {
-  box-sizing: border-box;
   margin: 0 auto;
-  // max-width: 1140px;
-  // padding-left: calc(100vw - 100%);
+  max-width: 1140px;
+  min-height: 100vh;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
-  min-height: 100vh;
 }
 
 #site-header {
@@ -27,33 +25,27 @@
 
 #site-body {
   box-sizing: border-box;
-  // margin: 0 auto;
-  // min-height: calc(100vh - #{$site-header-height} - #{$site-footer-height});
   background: $site-body-background;
-  flex: 1 1 auto;
+  flex: auto;
   display: flex;
-  justify-content: flex-start;
 }
 
-
-#site-main,
-#site-aside {
+#site-sidebar {
   box-sizing: border-box;
-  margin: 0 auto;
-  min-height: inherit;
-  padding: 15px;
+  // padding: 15px;
+  width: 320px;
+  @include sidebar($sidebar-enabled, $sidebar-aside);
 }
 
-#site-aside {
-  // float: right;
-  width: 30%;
-  padding-left: 10px;
-  border-left: 1px solid;
+#site-main {
+  box-sizing: border-box;
+  // padding: 15px;
+  flex: auto;
 }
 
-#site-main.layout-home {
-  float: left;
-  // width: 70%;
-  width: 100%;
-  padding-right: 10px;
+
+@media (max-width: 760px) {
+  #site-sidebar {
+    display: none;
+  }
 }

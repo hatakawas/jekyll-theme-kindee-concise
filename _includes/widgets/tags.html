@@ -1,0 +1,8 @@
+<section class="widget">
+    <h2>Tags</h2>
+        <div>
+            {%- for tag in site.tags -%}
+            <span>{{ tag | first }}</span>
+            {%- endfor -%}
+        </div>
+</section>

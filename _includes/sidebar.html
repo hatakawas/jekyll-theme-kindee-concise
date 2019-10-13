@@ -1,0 +1,11 @@
+<div id="site-sidebar-content" class="site-sidebar-content">
+  {%- if theme.widgets.categories.enabled -%}
+    {%- include widgets/categories.html -%}
+  {%- endif -%}
+  {%- if theme.widgets.tags.enabled -%}
+    {%- include widgets/tags.html -%}
+  {%- endif -%}
+  {%- if theme.widgets.recent_posts.enabled -%}
+    {%- include widgets/recent_posts.html -%}
+  {%- endif -%}
+</div>

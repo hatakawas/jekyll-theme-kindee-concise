@@ -2,7 +2,7 @@
 layout: post
 date: 2018-07-31 19:56:02 +0800
 title: "面向对象编程中的SOLID设计原则"
-categories: [Strength]
+categories: Strength
 tags: [oop, design principles, solid]
 description: "面向对象程序设计中的 S.O.L.I.D 原则"
 ---

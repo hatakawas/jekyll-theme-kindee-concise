@@ -1,0 +1,15 @@
+.site-sidebar-content {
+  width: inherit;
+  .widget {
+    box-sizing: border-box;
+    margin: 15px;
+    padding: 10px 15px;
+    background: #fdfdfd;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  }
+}

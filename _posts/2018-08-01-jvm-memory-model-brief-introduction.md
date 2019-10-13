@@ -2,7 +2,7 @@
 layout: post
 date: 2018-08-01 19:27:57 +0800
 title: "JVM内存模型简介"
-categories: [Strength]
+categories: Strength
 tags: [jvm, 内存模型]
 description: "JVM运行时内存模型介绍"
 ---
