@@ -3,9 +3,10 @@ layout: default
 ---
 
 <main id="site-main">
-    <div class="blogpost-breviaries">
+    <!-- Home page, blogpost breviary list -->
+    <div class="site-main-content blogposts">
         {%- for post in site.posts -%}
-        <article class="breviary">
+        <article class="blogpost-breviary">
             <header>
                 <h2><a href="{{ post.url }}">{{ post.title | escape }}</a></h2>
                 <time>{{ post.date | date: site.data.kindee.date_format }}</time>
@@ -34,6 +35,6 @@ layout: default
 
 {%- if theme.sidebar.enabled -%}
 <aside id="site-sidebar">
-  {%- include sidebar.html -%}
+    {%- include sidebar.html -%}
 </aside>
 {%- endif -%}
