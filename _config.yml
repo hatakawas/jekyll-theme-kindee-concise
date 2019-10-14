@@ -32,7 +32,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
-
 theme_namespace: kindee
 jekyll-theme-kindee-simple:
   # Author's website, fallback to site.url if not set.
@@ -51,3 +50,6 @@ jekyll-theme-kindee-simple:
       enabled: true
     recent_posts:
       enabled: true
+
+  # Blogpost date format
+  date_format: "%Y.%m.%d"

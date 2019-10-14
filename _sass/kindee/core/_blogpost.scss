@@ -1,0 +1,15 @@
+.blogpost {
+    .blogpost-details {
+        box-sizing: border-box;
+        margin: 15px;
+        padding: 10px 15px;
+        background: #fdfdfd;
+        // 30px is the padding-top and padding-bottom of .site-body-content
+        // min-height: calc(100vh - #{$site-header-height} - #{$site-footer-height} - 30px);
+
+        .blogpost-title,
+        .blogpost-meta {
+            display: inline-block;
+        }
+    }
+}
