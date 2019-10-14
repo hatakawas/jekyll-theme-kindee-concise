@@ -28,21 +28,24 @@
   background: $site-body-background;
   flex: auto;
   display: flex;
+  // justify-content: space-between:
 }
 
 #site-sidebar {
   box-sizing: border-box;
-  // padding: 15px;
-  width: 320px;
+  flex: 1 0 320px;
   @include sidebar($sidebar-enabled, $sidebar-aside);
 }
 
 #site-main {
   box-sizing: border-box;
-  // padding: 15px;
   flex: auto;
 }
 
+.site-main-content,
+.site-sidebar-content {
+  margin: 15px;
+}
 
 @media (max-width: 760px) {
   #site-sidebar {
