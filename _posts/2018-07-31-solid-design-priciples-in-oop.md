@@ -1,13 +1,14 @@
 ---
 layout: post
 date: 2018-07-31 19:56:02 +0800
-title: "面向对象编程中的SOLID设计原则"
-tags: [oop, design principles, solid]
-categories: Strength
-description: "面向对象程序设计中的 S.O.L.I.D 原则"
+title: "浅谈面向对象编程中的SOLID设计原则"
+tags: [OOP, SOLID, 设计原则, 设计模式]
+categories: Knowledge
 ---
 
 在软件的生命周期中，完成并不代表着结束，往往维护运营往往需要投入更多的成本，包括精力成本和时间成本。而一个遵循着好的开发规范以及拥有着良好设计原则的系统，往往可以节约大量的后期维护升级成本。说起设计，往往大家第一反应是设计模式，殊不知，二十几种设计其实都遵循着一些基本的设计原则。S.O.L.I.D，是事实证明的良好设计原则。
+
+<!-- more -->
 
 SOLID，每个字母分别对应于一个原则：
 - S，SRP，Single Responsibility Principle
@@ -15,8 +16,6 @@ SOLID，每个字母分别对应于一个原则：
 - L，LSP，Liskov Substitution Principle
 - I，ISP，Interface Segregation Principle
 - D，DIP，Dependency Inversion Principle
-
-下面分别详述其含义。
 
 ## SRP，单一职责原则
 

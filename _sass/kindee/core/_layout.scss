@@ -1,6 +1,6 @@
 .site {
   margin: 0 auto;
-  max-width: 1140px;
+  max-width: $site-width;
   min-height: 100vh;
   display: flex;
   flex-flow: column nowrap;
@@ -26,6 +26,7 @@
 #site-body {
   box-sizing: border-box;
   background: $site-body-background;
+  max-width: inherit;
   flex: auto;
   display: flex;
   // justify-content: space-between:
@@ -39,7 +40,8 @@
 
 #site-main {
   box-sizing: border-box;
-  flex: auto;
+  max-width: inherit;
+  flex: 0 1 auto;
 }
 
 .site-main-content,
