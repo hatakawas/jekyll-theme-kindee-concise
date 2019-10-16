@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/hatakawas/jekyll-theme-kindee-simple.git"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README)/|\.(txt|md|markdown|html)$!i) }
+  spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|LICENSE|README)/|\.(txt|md|markdown|xml)$!i) }
 
   spec.add_runtime_dependency "jekyll", "~> 4.0"
   spec.add_runtime_dependency "jekyll-feed", "~> 0.11"
