@@ -6,7 +6,7 @@ layout: page
 {% for category in all_categories %}
 {%- assign category_name = category[0] -%}
 <h3 id="{{ category_name | slugify }}">
-  <a href="{{ page.path }}#{{ category_name | slugify }}">{{ category_name | camelcase }}</a>
+  <a href="{{ page.url }}#{{ category_name | slugify }}">{{ category_name | uri_escape  | camelcase }}</a>
 </h3>
 <ul>
   {% assign posts = category[1] %}

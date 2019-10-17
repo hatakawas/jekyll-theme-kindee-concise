@@ -12,24 +12,22 @@
   height: $site-header-height;
   background: $site-header-background;
   border-top: 5px solid #424242;
-  border-bottom: 1px solid #efefef;
 }
 
 #site-footer {
   box-sizing: border-box;
   height: $site-footer-height;
   background: $site-footer-background;
-  border-top: 1px solid #efefef;
   border-bottom: 5px solid #424242;
 }
 
 #site-body {
   box-sizing: border-box;
   background: $site-body-background;
+  margin: 10px 0;
   max-width: inherit;
   flex: auto;
   display: flex;
-  // justify-content: space-between:
 }
 
 #site-sidebar {
@@ -42,11 +40,8 @@
   box-sizing: border-box;
   max-width: inherit;
   flex: auto;
-}
-
-.site-main-content,
-.site-sidebar-content {
-  margin: 15px;
+  display: flex;
+  flex-flow: column;
 }
 
 @media (max-width: 760px) {

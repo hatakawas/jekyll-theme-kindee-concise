@@ -6,7 +6,7 @@ layout: page
 {% for tag in all_tags %}
 {%- assign tag_name = tag[0] -%}
 <h3 id="{{ tag_name | slugify }}">
-  <a href="{{ page.path }}#{{ tag_name | slugify }}">{{ tag_name | camelcase }}</a>
+  <a href="{{ page.url }}#{{ tag_name | slugify }}">{{ tag_name | camelcase }}</a>
 </h3>
 <ul>
   {% assign posts = tag[1] %}
