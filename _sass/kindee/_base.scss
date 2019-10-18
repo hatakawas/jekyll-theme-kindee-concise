@@ -20,7 +20,13 @@ h6 {
 }
 
 a {
+    cursor: pointer;
+    color: inherit;
     text-decoration: none;
+
+    &:hover {
+      color: blue;
+    }
 }
 
 img {
@@ -34,6 +40,6 @@ img {
 // code snippets
 pre {
   padding: 8px;
-  overflow: auto;
+  overflow: hidden;
   max-height: 400px;
 }

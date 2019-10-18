@@ -1,10 +1,10 @@
 @import "core/layout";
 @import "core/header";
 @import "core/footer";
+@import "core/main";
 @import "core/sidebar";
-// .site-main-content.blogposts
-@import "core/blogposts";
-// .site-main-content.blogpost
+
+@import "core/blogpost-excerpt";
 @import "core/blogpost";
-// .site-main-content.singlepage
-@import "core/singlepage";
+@import "core/widget";
+@import "core/singleton";
