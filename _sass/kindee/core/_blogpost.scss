@@ -1,8 +1,9 @@
 .site-main-content.blogpost {
   .blogpost-details {
     box-sizing: border-box;
+    // margin: 15px;
     padding: 10px 15px;
-    background: $site-content-background;
+    background: #fdfdfd;
     .blogpost-title,
     .blogpost-meta {
       display: inline-block;

@@ -6,9 +6,6 @@
     display: none;
   } @else if ($aside=='left') {
     order: -1;
-    margin-right: 15px;
-  } @else {
-    margin-left: 15px;
   }
 }
 
@@ -18,13 +15,4 @@
   margin: 3px;
   font-size: 12px;
   border-radius: 5px;
-}
-
-@mixin trim() {
-  &:first-child {
-    margin-top: 0;
-  }
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
