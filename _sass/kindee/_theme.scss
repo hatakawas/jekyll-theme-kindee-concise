@@ -1,0 +1,36 @@
+// Themed variables
+// ---------------------------------------------------------------------------
+// $themed-body-bgcolor: rgb(235, 235, 235);
+
+
+
+// Variables
+// ---------------------------------------------------------------------------
+$theme_name: theme-yellow;
+$base-body-bgcolor: rgb(235, 235, 235);
+
+
+
+
+
+// Themes
+// ---------------------------------------------------------------------------
+@mixin theme-yellow {
+    font-weight: 100;
+    $base-body-bgcolor: rgb(235, 235, 0);
+}
+
+@mixin theme-purple {
+    $base-body-bgcolor: rgb(235, 0, 235);
+}
+
+
+// Use theme
+@mixin themify($theme_name) {
+    @if $theme_name == theme-yellow {
+        @include theme-yellow;
+    }
+    @if $theme_name == theme-purple {
+        @include theme-purple;
+    }
+}
