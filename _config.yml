@@ -25,8 +25,6 @@ description: >- # this means to ignore newlines until "baseurl:"
 markdown: kramdown
 theme: jekyll-theme-kindee-simple
 
-# permalink: /:year/:month/:day/:title:output_ext
-
 plugins:
   - jekyll-feed
   - jekyll-sitemap
