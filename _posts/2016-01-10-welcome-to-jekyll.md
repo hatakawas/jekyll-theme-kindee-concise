@@ -2,8 +2,8 @@
 layout: post
 date: 2016-01-10 22:22:11 +0800
 title: "Welcome to Jekyll!"
-tags: [jekyll, test1]
 categories: _Others
+tags: [jekyll, test1]
 description: 
 ---
 

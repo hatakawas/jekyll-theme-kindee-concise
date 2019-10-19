@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Tags
 ---
 
 {%- assign all_tags = site.tags | sort -%}

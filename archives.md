@@ -1,5 +1,7 @@
 ---
 layout: page
+title: Archives
+permalink: /archives.html
 ---
 
 {% for post in site.posts %}

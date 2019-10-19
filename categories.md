@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Categories
 ---
 
 {%- assign all_categories = site.categories | sort -%}
