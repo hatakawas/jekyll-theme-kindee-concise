@@ -1,5 +1,11 @@
-<footer class="site-footer clearfix">
-    <div class="copyright">
-        COPYRIGHT &copy; 2018 {{ site.author }} ALL RIGHTS RESERVED.
-    </div>
-</footer>
+<div class="site-footer-content container">
+  <div class="copyright">
+    &copy; <span itemprop="copyrightYear">{{ "now" | date: "%Y"}}</span>
+    <span class="with-love"><i class="fa fa-heart"></i></span>
+    <span class="author"><a href="{{ site.kindee.website | default: '#' }}">{{ site.kindee.author.name | default: site.author }}</a></span>
+  </div>
+  <div class="poweredby">
+    Powered by <a href="https://jekyllrb.com">Jekyll</a> &
+    Themed by <a href="https://github.com/hatakawas/jekyll-theme-kindee-simple">kindee-simple</a>
+  </div>
+</div>

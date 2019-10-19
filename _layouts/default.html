@@ -2,14 +2,32 @@
 <html lang="zh">
 
 {%- include head.html -%}
-<body>
-    <div class="wrapper">
-        {%- include header.html -%}
-        <main class="site-body clearfix">
-            {{ content }}
+
+<body class="site">
+  <header id="site-header">
+    <!-- <div class="container"> -->
+      {%- include header.html -%}
+    <!-- </div> -->
+  </header>
+  <div id="site-body">
+    <!-- <div class="container"> -->
+      <div class="site-body-content container">
+        <main id="site-main">
+          {{content}}
         </main>
-        {%- include footer.html -%}
-    </div>
+        {%- if site.kindee.sidebar.enabled -%}
+        <aside id="site-sidebar">
+          {%- include sidebar.html -%}
+        </aside>
+        {%- endif -%}
+      </div>
+    <!-- </div> -->
+  </div>
+  <footer id="site-footer">
+    <!-- <div class="container"> -->
+      {%- include footer.html -%}
+    <!-- </div> -->
+  </footer>
 </body>
 
 </html>

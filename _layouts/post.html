@@ -2,19 +2,26 @@
 layout: default
 ---
 
-<div class="site-body-content layout-post">
-    <article class="blogpost" itemscope itemtype="http://schema.org/BlogPosting">
-        <header class="blogpost-header">
-            <h2 class="blogpost-title" itemprop="name headline">{{ page.title }}</h2>
-            <div class="blogpost-meta">
-                <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-                    {{ page.date | date: site.kindee.date_format }}
-                </time>
-            </div>
-        </header>
-        <div class="blogpost-content" itemprop="articleBody">
-            {{ content }}
+<!-- Blogpost page -->
+<div class="site-main-content">
+  <!-- Blogpost details -->
+  <section class="card blogpost" itemscope itemtype="http://schema.org/BlogPosting">
+    <article class="card-content">
+      <header class="blogpost-header">
+        <h2 class="blogpost-title" itemprop="name headline">{{ page.title }}</h2>
+        <div class="blogpost-meta">
+          <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+            {{ page.date | date: site.kindee.date_format }}
+          </time>
         </div>
+      </header>
+      <div class="blogpost-content" itemprop="articleBody">
+        {{ content }}
+      </div>
     </article>
+  </section>
+  <!-- TODO: Prev/Next buttons -->
+  <!-- TODO: Creative Commons -->
+  <!-- TODO: Donate -->
+  <!-- TODO: Comments -->
 </div>
-{%- include aside.html -%}

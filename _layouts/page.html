@@ -2,13 +2,15 @@
 layout: default
 ---
 
-<div class="site-body-content layout-page">
-    <article class="singlepage">
-        <header class="singlepage-header">
-            <h1 class="singlepage-title">{{ page.title }}</h1>
-        </header>
-        <div class="singlepage-content">
-            {{ content }}
-        </div>
-    </article>
+<div class="site-main-content">
+  <section class="card singleton">
+    <div class="card-content">
+      <header class="singleton-header">
+        <h1 class="singleton-title">{{ page.title }}</h1>
+      </header>
+      <div class="singleton-content">
+        {{ content }}
+      </div>
+    </div>
+  </section>
 </div>

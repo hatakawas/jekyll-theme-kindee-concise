@@ -13,8 +13,8 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: 逻魔代码
-author: the-author-name
+title: THE-TITLE
+author: THE-AUTHOR-NAME
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -25,10 +25,31 @@ description: >- # this means to ignore newlines until "baseurl:"
 markdown: kramdown
 theme: jekyll-theme-kindee-simple
 
+# permalink: /:year/:month/:day/:title:output_ext
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
 
+theme_namespace: kindee
 kindee:
+  # Author's website, fallback to site.url if not set.
+  website: https://luomo.io/
+
+  # Sitebar settings.
+  sidebar:
+    enabled: true
+    aside: right
+
+  # Widgets settings.
+  widgets:
+    categories:
+      enabled: true
+    tags:
+      enabled: true
+    recent_posts:
+      enabled: true
+
+  # Blogpost date format
   date_format: "%Y.%m.%d"

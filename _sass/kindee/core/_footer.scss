@@ -1,0 +1,17 @@
+.site-footer-content {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  .copyright,
+  .poweredby {
+    display: block;
+  }
+
+  .with-love {
+    margin: 0 px;
+    color: red;
+    display: inline-block;
+  }
+}

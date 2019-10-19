@@ -1,0 +1,42 @@
+.blogpost-excerpt {
+  @include trim();
+
+  header {
+
+    h2,
+    time {
+      display: inline-block;
+    }
+  }
+
+  footer {
+    display: flex;
+
+    // flex-flow: column;
+    .blogpost-meta {
+      margin-right: 10px;
+      display: flex;
+      align-items: center;
+
+      i {
+        color: rgb(182, 211, 236);
+        font-size: 14px;
+        margin: 2px;
+      }
+
+      .categories,
+      .tags {
+        display: flex;
+        flex-flow: row wrap;
+      }
+
+      .category,
+      .tag {
+
+        @include chip();
+        margin: 3px 2px;
+        padding: 0 5px;
+      }
+    }
+  }
+}

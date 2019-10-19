@@ -2,17 +2,16 @@
 layout: post
 date: 2018-08-01 19:27:57 +0800
 title: "JVM内存模型简介"
-categories: [Strength]
-tags: [jvm, 内存模型]
-description: "JVM运行时内存模型介绍"
+tags: [JVM, Java虚拟机, 内存模型]
+categories: Knowledge
 ---
 
 Java 程序在运行过程中，JVM 会将其管理的内存划分为几个不同的数据区域。这些数据区域各有用途，并且具备不同的创建和销毁时间。
+JVM 运行时数据区主要分为五个部分：方法区、堆、虚拟机栈、本地方法栈、程序计数器。需要注意的是前两个部分是由所有线程共享的数据区，后面三个部分则是线程隔离的数据区。如下图所示。
 
-![JVM 运行时数据区][JVM-Memory-Model]
+<!-- more -->
 
-如上图，JVM 运行时数据区主要分为五个部分：方法区、堆、虚拟机栈、本地方法栈、程序计数器。需要注意的是前两个部分是由所有线程共享的数据区，后面三个部分则是线程隔离的数据区。
-
+![JVM运行时数据区][JVM-Memory-Model]
 
 ## 程序计数器
 
@@ -55,7 +54,7 @@ JVM 执行 Java 方法时，计数器记录的是正在执行的字节码指令�
 
 - 方法区无法满足内存分配需求时，抛出 OOME 异常。
 
-## *直接内存*
+## 直接内存
 
 直接内存不属于虚拟机运行时数据区的任何一部分。
 
@@ -65,4 +64,4 @@ OOME 发生时，也可能是由于直接内存与JVM占用内存的加和超出
 
 
 
-[JVM-Memory-Model]: {{'/assets/images/jvm-memory-model.png' | prepend: site.cdnurl }} "JVM内存模型"
+[JVM-Memory-Model]: /assets/images/jvm-memory-model.png "JVM运行时数据区"

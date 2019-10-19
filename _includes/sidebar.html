@@ -1,0 +1,14 @@
+<div class="site-sidebar-content">
+  <!-- Widget: categories -->
+  {%- if site.kindee.widgets.categories.enabled -%}
+    {%- include widgets/categories.html -%}
+  {%- endif -%}
+  <!-- Widget: tags -->
+  {%- if site.kindee.widgets.tags.enabled -%}
+    {%- include widgets/tags.html -%}
+  {%- endif -%}
+  <!-- Widget: recent_posts -->
+  {%- if site.kindee.widgets.recent_posts.enabled -%}
+    {%- include widgets/recent_posts.html -%}
+  {%- endif -%}
+</div>

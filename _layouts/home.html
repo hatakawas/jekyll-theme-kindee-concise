@@ -2,21 +2,37 @@
 layout: default
 ---
 
-<div class="site-body-content layout-home">
-    {%- for post in site.posts -%}
-    <article class="article-module">
+<!-- Home page, blogpost breviary list -->
+<div class="site-main-content">
+  {%- for post in site.posts -%}
+  <section class="card blogpost-excerpt">
+    <article class="card-content">
         <header>
             <h2><a href="{{ post.url }}">{{ post.title | escape }}</a></h2>
             <time>{{ post.date | date: site.kindee.date_format }}</time>
-        </header>
-        <article>
+          </header>
+          <main>
             {{ post.excerpt }}
-        </article>
-        <footer>
-            <span><i class="fa fa-folder" aria-hidden="true"></i>：{{ post.categories }}</span>
-            <span><i class="fa fa-tags" aria-hidden="true"></i>：{{ post.tags }}</span>
-        </footer>
+          </main>
+          <footer>
+            <div class="blogpost-meta">
+              <i class="fa fa-folder" aria-hidden="true"></i>
+              <div class="categories">
+                {%- for category in post.categories -%}
+                <span class="category">{{category}}</span>
+                {%- endfor -%}
+              </div>
+            </div>
+            <div class="blogpost-meta">
+              <i class="fa fa-tags" aria-hidden="true"></i>
+              <div class="tags">
+                {%- for tag in post.tags -%}
+                <span class="tag">{{tag}}</span>
+                {%- endfor -%}
+              </div>
+            </div>
+          </footer>
     </article>
-    {%- endfor -%}
+  </section>
+  {%- endfor -%}
 </div>
-{%- include aside.html -%}

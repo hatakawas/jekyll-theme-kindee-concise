@@ -1,0 +1,12 @@
+<section class="card widget">
+  <div class="card-content">
+    <h2>Tags</h2>
+    <div class="tags">
+      {%- for tag in site.tags -%}
+      <a href="{{ '/tags.html' }}#{{ tag[0] | downcase | url_escape | strip | replace: ' ', '-' }}">
+        <span class="tag">{{ tag[0] | camelcase }}</span>
+      </a>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>

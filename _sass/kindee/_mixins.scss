@@ -1,0 +1,33 @@
+// ==========================================================================
+// Mixins
+// ==========================================================================
+@mixin sidebar($enabled, $aside) {
+  @if (not $enabled) {
+    display: none;
+  }
+
+  @else if ($aside=='left') {
+    order: -1;
+    // margin-right: 15px;
+  }
+
+  @else {
+    // margin-left: 15px;
+  }
+}
+
+@mixin chip() {
+  margin: 3px;
+  padding: 3px 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  background: rgba(197, 209, 207, 0.5);
+}
+
+@mixin trim() {
+  margin-top: 10px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}

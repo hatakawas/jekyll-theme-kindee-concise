@@ -1,0 +1,22 @@
+---
+layout: page
+---
+
+{%- assign all_tags = site.tags | sort -%}
+{% for tag in all_tags %}
+{%- assign tag_name = tag[0] -%}
+<h3 id="{{ tag_name | slugify }}">
+  <a href="{{ page.url }}#{{ tag_name | slugify }}">{{ tag_name | camelcase }}</a>
+</h3>
+<ul>
+  {% assign posts = tag[1] %}
+  {% for post in posts %}
+  <li>
+    <a href="{{ post.url }}">
+      <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date:
+            site.kindee.date_format }}</time> ~> {{ post.title }}
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+{% endfor %}
