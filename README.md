@@ -1,5 +1,7 @@
 # jekyll-theme-kindee-simple
 
+Archived, move to [jekyll-theme-kindee](https://github.com/hatakawas/jekyll-theme-kindee)
+
 Jekyll-theme-kindee-simple is a simple but not simple theme for jekyll.
 
 ## Installation
