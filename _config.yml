@@ -30,3 +30,5 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
+kindee:
+  date_format: "%Y.%m.%d"
