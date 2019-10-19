@@ -1,18 +1,36 @@
 // ==========================================================================
 // Mixins
 // ==========================================================================
+@mixin module {
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    padding: 15px 20px;
+    background: #fdfdfd;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@mixin page {
+    box-sizing: border-box;
+    padding: 15px 20px;
+    background: #fdfdfd;
+    // 30px is the padding-top and padding-bottom of .site-body-content
+    min-height: calc(100vh - #{$site-header-height} - #{$site-footer-height} - 30px);
+}
+
+
+
 @mixin sidebar($enabled, $aside) {
   @if (not $enabled) {
     display: none;
-  } @else if ($aside=='left') {
-    order: -1;
+  } @else {
+    @if ($aside == 'left') {
+      order: -1;
+      // border-right: 1px solid;
+    } @else {
+      // border-left: 1px solid;
+    }
   }
-}
-
-@mixin chip() {
-  background: rgba(197, 209, 207, 0.5);
-  padding: 3px 5px;
-  margin: 3px;
-  font-size: 12px;
-  border-radius: 5px;
 }
