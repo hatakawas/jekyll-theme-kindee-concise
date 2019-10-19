@@ -2,25 +2,18 @@
 layout: default
 ---
 
-<main id="site-main">
-    <!-- Blogpost page -->
-    <div class="site-main-content blogpost">
-        <!-- Blogpost details -->
-        <article class="blogpost-details" itemscope itemtype="http://schema.org/BlogPosting">
-            <header class="blogpost-header">
-                <h2 class="blogpost-title" itemprop="name headline">{{ page.title }}</h2>
-                <div class="blogpost-meta">
-                    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-                        {{ page.date | date: theme.date_format }}
-                    </time>
-                </div>
-            </header>
-            <div class="blogpost-content" itemprop="articleBody">
-                {{ content }}
+<!-- <div class="site-body-content layout-post">
+    <article class="blogpost" itemscope itemtype="http://schema.org/BlogPosting">
+        <header class="blogpost-header">
+            <h2 class="blogpost-title" itemprop="name headline">{{ page.title }}</h2>
+            <div class="blogpost-meta">
+                <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                    {{ page.date | date: site.kindee.date_format }}
+                </time>
             </div>
-        </article>
-        <!-- TODO: Prev/Next buttons -->
-        <!-- TODO: Creative Commons -->
-        <!-- TODO: Donate -->
-        <!-- TODO: Comments -->
-</main>
+        </header>
+        <div class="blogpost-content" itemprop="articleBody">
+            {{ content }}
+        </div>
+    </article>
+</div>
