@@ -33,7 +33,7 @@ plugins:
   - jekyll-seo-tag
 
 theme_namespace: kindee
-kindee:
+jekyll-theme-kindee-simple:
   # Author's website, fallback to site.url if not set.
   website: https://luomo.io/
 
