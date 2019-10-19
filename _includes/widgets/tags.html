@@ -1,10 +1,8 @@
-<section class="card widget">
-  <div class="card-content">
-    <h2>Tags</h2>
-    <div class="tags">
-      {%- for tag in site.tags -%}
-      <span class="tag">{{ tag | first }}</span>
-      {%- endfor -%}
-    </div>
+<section class="widget">
+  <h2>Tags</h2>
+  <div class="tags">
+    {%- for tag in site.tags -%}
+    <span class="tag">{{ tag | first }}</span>
+    {%- endfor -%}
   </div>
 </section>

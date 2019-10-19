@@ -1,63 +1,48 @@
 .site {
   margin: 0 auto;
+  max-width: $site-width;
   min-height: 100vh;
   display: flex;
-  flex-flow: column;
+  flex-flow: column nowrap;
   justify-content: space-between;
 }
 
 #site-header {
-  min-height: $site-header-min-height;
+  box-sizing: border-box;
+  height: $site-header-height;
   background: $site-header-background;
   border-top: 5px solid #424242;
 }
 
 #site-footer {
-  min-height: $site-footer-min-height;
+  box-sizing: border-box;
+  height: $site-footer-height;
   background: $site-footer-background;
   border-bottom: 5px solid #424242;
 }
 
 #site-body {
+  box-sizing: border-box;
   background: $site-body-background;
-  flex: auto;
-}
-
-#site-header,
-#site-footer,
-#site-body {
-  box-sizing: border-box;
-  display: flex;
-}
-
-.site-header-content,
-.site-footer-content,
-.site-body-content {
-  margin: 0 auto;
-  padding: 10px 0;
-  max-width: $site-width;
+  margin: 10px 0;
+  max-width: inherit;
   flex: auto;
   display: flex;
-}
-
-// .site-body-content {
-//   display: flex;
-// }
-
-#site-main {
-  box-sizing: border-box;
-  flex: auto;
-  min-width: 0;
-  display: flex;
-  flex-flow: column;
 }
 
 #site-sidebar {
   box-sizing: border-box;
-  flex: 0 0 320px;
+  flex: 1 0 320px;
   @include sidebar($sidebar-enabled, $sidebar-aside);
 }
 
+#site-main {
+  box-sizing: border-box;
+  max-width: inherit;
+  flex: auto;
+  display: flex;
+  flex-flow: column;
+}
 
 @media (max-width: 760px) {
   #site-sidebar {

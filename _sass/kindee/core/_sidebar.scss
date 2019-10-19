@@ -1,3 +1,24 @@
 .site-sidebar-content {
-  padding: 10px;
+  .widget {
+    box-sizing: border-box;
+    margin: 10px 0;
+    padding: 10px 15px;
+    background: $site-content-background;
+
+    @include trim();
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .tags {
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    .tag {
+      @include chip();
+    }
+  }
 }
