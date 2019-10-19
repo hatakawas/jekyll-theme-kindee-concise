@@ -64,4 +64,4 @@ OOME 发生时，也可能是由于直接内存与JVM占用内存的加和超出
 
 
 
-[JVM-Memory-Model]: /assets/images/jvm-memory-model.png "JVM运行时数据区"
+[JVM-Memory-Model]: jvm-memory-model.png "JVM运行时数据区"
