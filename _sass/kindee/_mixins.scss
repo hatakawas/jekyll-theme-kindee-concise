@@ -19,18 +19,3 @@
     // 30px is the padding-top and padding-bottom of .site-body-content
     min-height: calc(100vh - #{$site-header-height} - #{$site-footer-height} - 30px);
 }
-
-
-
-@mixin sidebar($enabled, $aside) {
-  @if (not $enabled) {
-    display: none;
-  } @else {
-    @if ($aside == 'left') {
-      order: -1;
-      // border-right: 1px solid;
-    } @else {
-      // border-left: 1px solid;
-    }
-  }
-}
