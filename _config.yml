@@ -35,19 +35,6 @@ plugins:
 
 theme_namespace: kindee
 jekyll-theme-kindee-simple:
-  # Author's website, fallback to site.url if not set.
-  website: https://luomo.io/
+  name: BLOG-NAME
+  title: BLOG-TITLE
 
-  # Sitebar settings.
-  sidebar:
-    enabled: true
-    aside: right
-
-  # Widgets settings.
-  widgets:
-    categories:
-      enabled: true
-    tags:
-      enabled: true
-    recent_posts:
-      enabled: true
