@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-kindee-simple"
-  spec.version       = "0.1.9"
+  spec.version       = "0.1.7"
   spec.authors       = ["hatakawas"]
   spec.email         = ["hatakawas@163.com"]
 
