@@ -15,7 +15,7 @@ title: Tags
   <li>
     <a href="{{ post.url }}">
       <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date:
-            site.kindee.date_format }}</time> ~> {{ post.title }}
+            theme.date_format }}</time> ~> {{ post.title }}
     </a>
   </li>
   {% endfor %}
