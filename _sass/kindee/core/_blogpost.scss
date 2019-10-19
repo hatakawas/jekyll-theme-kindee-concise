@@ -1,4 +1,6 @@
 .blogpost {
+  box-sizing: border-box;
+
   .blogpost-title,
   .blogpost-meta {
     display: inline-block;

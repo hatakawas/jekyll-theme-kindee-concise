@@ -19,8 +19,8 @@
 }
 
 #site-body {
-  flex: auto;
   background: $site-body-background;
+  flex: auto;
 }
 
 #site-header,
@@ -33,24 +33,28 @@
 .site-header-content,
 .site-footer-content,
 .site-body-content {
-  flex: auto;
   margin: 0 auto;
   padding: 10px 0;
   max-width: $site-width;
+  flex: auto;
   display: flex;
 }
 
+// .site-body-content {
+//   display: flex;
+// }
+
 #site-main {
-  flex: auto;
   box-sizing: border-box;
+  flex: auto;
   min-width: 0;
   display: flex;
   flex-flow: column;
 }
 
 #site-sidebar {
-  flex: 0 0 320px;
   box-sizing: border-box;
+  flex: 0 0 320px;
   @include sidebar($sidebar-enabled, $sidebar-aside);
 }
 

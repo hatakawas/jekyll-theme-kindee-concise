@@ -1,4 +1,10 @@
 .blogpost-excerpt {
+  box-sizing: border-box;
+  // margin: 10px 0;
+  // padding: 10px 15px;
+  // background: $site-content-background;
+  // background: #fdfdfd;
+
   @include trim();
 
   header {
