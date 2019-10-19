@@ -1,39 +1,15 @@
 <!DOCTYPE html>
 <html lang="zh">
 
-<head>
-  <meta charset="UTF-8">
-  <base href="{{ site.baseurl | prepend: site.url }}">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- Set render engine for 360 browser -->
-  <meta name="renderer" content="webkit">
-  <!-- No Baidu Siteapp-->
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
-  {%- seo -%}
-  <!-- Page title icon -->
-  <link rel="icon" type="image/png" href="{{ '/favicon.ico' | relative_url }}">
-  <!-- Favorites icon -->
-  <link rel="shortcut icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
-  <link rel="bookmark" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | relative_url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
-  <!-- Styles -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700">
-  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <!-- The theme is based on normalize.css -->
-  <!-- <link rel="stylesheet" href="{{ '/assets/css/normalize.css' | relative_url }}"> -->
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
-</head>
-
+{%- include head.html -%}
 <body>
-  <div class="site">
-      <header id="site-header">This is site header.</header>
-      <div id="site-body">
-        {{ content }}
-      </div>
-      <footer id="site-footer">This is site footer.</footer>
-  </div>
+    <div class="wrapper">
+        {%- include header.html -%}
+        <main class="site-body clearfix">
+            {{ content }}
+        </main>
+        {%- include footer.html -%}
+    </div>
 </body>
 
 </html>
