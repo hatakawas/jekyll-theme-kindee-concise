@@ -3,7 +3,7 @@
     <h2>Categories</h2>
     <ul>
       {% assign site_categories = site.categories | sort %}
-      {% if site_categories.first[0] == nil %}
+      {% if site_categories.first[0] == null %}
       {% for category in site_categories %}
       <li><a href="{{ '/categories.html' }}#{{ category | downcase | url_escape | strip | replace: ' ', '-' }}">{{ category |
                     camelcase }} ({{ site.tags[category].size }})</a></li>
