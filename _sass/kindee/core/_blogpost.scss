@@ -1,8 +1,11 @@
-.blogpost {
-  box-sizing: border-box;
-
-  .blogpost-title,
-  .blogpost-meta {
-    display: inline-block;
+.site-main-content.blogpost {
+  .blogpost-details {
+    box-sizing: border-box;
+    padding: 10px 15px;
+    background: $site-content-background;
+    .blogpost-title,
+    .blogpost-meta {
+      display: inline-block;
+    }
   }
 }
